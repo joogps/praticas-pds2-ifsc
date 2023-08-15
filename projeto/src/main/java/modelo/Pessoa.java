@@ -1,19 +1,26 @@
 package modelo;
 
 public class Pessoa {
-	private int idPessoa;
-	private String primeiroNome;
+	private int id;
+	private String nome;
+	private String email;
 	
-	public int getIdPessoa() {
-		return idPessoa;
+	public int getId() {
+		return id;
 	}
-	public void setIdPessoa(int idPessoa) {
-		this.idPessoa = idPessoa;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getPrimeiroNome() {
-		return primeiroNome;
+	public String getNome() {
+		return nome;
 	}
-	public void setPrimeiroNome(String primeiroNome) {
-		this.primeiroNome = primeiroNome;
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

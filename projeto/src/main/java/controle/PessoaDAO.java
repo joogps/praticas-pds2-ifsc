@@ -11,12 +11,13 @@ public class PessoaDAO {
 		Conexao c = Conexao.getInstacia();
 		Connection con = c.conectar();
 		
-		String query = "INSERT INTO pessoa (id_pessoa, primeiro_nome) VALUES (?, ?);";
+		String query = "INSERT INTO usuarios (id_usuario, email, nome) VALUES (?, ?, ?);";
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(query);
-			ps.setInt(1, p.getIdPessoa());
-			ps.setString(2, p.getPrimeiroNome());
+			ps.setInt(1, p.getId());
+			ps.setString(2, p.getNome());
+			ps.setString(3, p.getEmail());
 			ps.executeUpdate();
 			
 			c.fecharConexao();
